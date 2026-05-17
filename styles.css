@@ -32,6 +32,51 @@ body {
   opacity: 0.6;
 }
 
+.topo {
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #7F00FF, #E100FF);
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.titulo-tema {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitulo-tema {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.botao-concluir {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #8052EC;
+  background: transparent;
+  color: #8052EC;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-concluir:hover {
+  background: rgba(128, 82, 236, 0.12);
+}
+
+.item-tarefa.concluido .botao-concluir {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
 .container {
   background: #FFFFFF;
   max-width: 541px;
@@ -76,13 +121,20 @@ body {
   border: none;
   background: transparent;
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 40px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 18px;
+  color: #E100FF;
+}
+
+.item-tarefa:hover .botao-delete {
+  opacity: 1;
 }
 
 .fa-trash {
